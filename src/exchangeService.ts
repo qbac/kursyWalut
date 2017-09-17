@@ -11,6 +11,11 @@ export class ExchangeService {
     }
 
     getExchangeRate(baseCurrency: string, targetCurrency: string){
+
+        if(baseCurrency === targetCurrency){
+            return 1;
+        }
+
         return this.exchangeRates[baseCurrency + '/' + targetCurrency];
     }
 }

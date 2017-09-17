@@ -8,6 +8,7 @@ import {ExchangeService} from './exchangeService';
                     <currency-select [(selected)]='baseCurrency'></currency-select>
                         = <strong>{{targetAmount}}</strong> 
                     <currency-select [(selected)]='targetCurrency'></currency-select>
+                    <p *ngIf="isValid(baseAmount)">Proszę podać wartość do przeliczenia</p>                   
               `,
   styles:[` input[type=number] {
               width: 10ex;
